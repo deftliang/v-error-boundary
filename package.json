@@ -1,8 +1,18 @@
 {
   "name": "v-error-boundary",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "error boundary component for vue3",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vue-error-boundary.umd.js",
+  "module": "./dist/vue-error-boundary.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-error-boundary.es.js",
+      "require": "./dist/vue-error-boundary.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
@@ -19,7 +29,7 @@
     "handle error"
   ],
   "author": "deft",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@vitejs/plugin-vue-jsx": "^1.3.10",
     "vue": "^3.2.25"
