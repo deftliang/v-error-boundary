@@ -1,16 +1,16 @@
 {
   "name": "v-error-boundary",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "error boundary component for vue3",
   "files": [
     "dist"
   ],
-  "main": "./dist/vue-error-boundary.umd.js",
-  "module": "./dist/vue-error-boundary.es.js",
+  "main": "./dist/v-error-boundary.umd.js",
+  "module": "./dist/v-error-boundary.es.js",
   "exports": {
     ".": {
-      "import": "./dist/vue-error-boundary.es.js",
-      "require": "./dist/vue-error-boundary.umd.js"
+      "import": "./dist/v-error-boundary.es.js",
+      "require": "./dist/v-error-boundary.umd.js"
     }
   },
   "scripts": {
