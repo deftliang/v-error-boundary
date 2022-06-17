@@ -4,19 +4,17 @@
 
 #### Install
 
-```
+```bash
 npm i v-error-boundary
-
-or
 
 yarn add v-error-boundary
 ```
 
 #### Usage
 
-```
+```html
 <VErrorBoundary>
-  <YourComponent/>
+  <YourComponent />
 </VErrorBoundary>
 ```
 
