@@ -19,9 +19,10 @@ const VErrorBoundary = defineComponent({
       return props.stopPropagation ? false : true;
     });
 
+    const scopedSlots = { hasError: hasError, error: err, info: info };
     const DefaultFallBack = () =>
       slots.defaultFallBack ? (
-        slots?.defaultFallBack()
+        slots?.defaultFallBack(scopedSlots)
       ) : (
         <div>
           <h2>Something went wrong.</h2>
@@ -32,7 +33,7 @@ const VErrorBoundary = defineComponent({
           </details>
         </div>
       );
-    const fallback = slots.fallback ? slots?.fallback() : DefaultFallBack();
+    const fallback = slots.fallback ? slots?.fallback(scopedSlots) : DefaultFallBack();
 
     return () => <>{hasError.value ? fallback : slots.default?.()}</>;
   },
