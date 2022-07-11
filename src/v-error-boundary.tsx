@@ -19,19 +19,16 @@ const VErrorBoundary = defineComponent({
       return props.stopPropagation ? false : true;
     });
 
-    const DefaultFallBack = () =>
-      slots.defaultFallBack ? (
-        slots?.defaultFallBack()
-      ) : (
-        <div>
-          <h2>Something went wrong.</h2>
-          <details style={{ whiteSpace: "pre-wrap" }}>
-            {err.value && err.value.toString()}
-            <br />
-            {err.value}
-          </details>
-        </div>
-      );
+    const DefaultFallBack = () => (
+      <div>
+        <h2>Something went wrong.</h2>
+        <details style={{ whiteSpace: "pre-wrap" }}>
+          {err.value && err.value.toString()}
+          <br />
+          {err.value}
+        </details>
+      </div>
+    );
     const fallback = slots.fallback ? slots?.fallback() : DefaultFallBack();
 
     return () => <>{hasError.value ? fallback : slots.default?.()}</>;

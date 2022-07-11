@@ -24,7 +24,6 @@ yarn add v-error-boundary
 | --------------- | --------------------------------------------- | ------------- | ------- |
 | stopPropagation | wheter prevent the error from propagating     | boolean       | false   |
 | fallback        | fallback component to render in case of error | slots \|VNode | -       |
-| defaultFallBack | change the default fallback component         | slots \|VNode | -       |
 
 #### Events
 

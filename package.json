@@ -1,6 +1,6 @@
 {
   "name": "v-error-boundary",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "error boundary component for vue3",
   "files": [
     "dist"
@@ -16,7 +16,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "release": "npm publish"
   },
   "repository": {
     "url": "deftliang/v-error-boundary",
